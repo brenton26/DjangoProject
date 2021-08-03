@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %} <!-- must load static files on every template, even though it extends another template -->
+{% block title %} API {% endblock %}
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'CAH_API/CAH.css' %}">
+{% endblock %}
+{% block pagetop-css %}cover-API{% endblock%}
+
+{% block page-title %}Cards Against Humanity API{% endblock %}
+{% block page-subtitle %}A horrible hroject for horrible people{% endblock %}
+{% block button1 %}<a href="{% url 'home' %}" class="contact-btn">Back to Apps</a>{% endblock %}
+{% block button2 %}<a href="{% url 'zen' %}" class="contact-btn">Zen of Python</a>{% endblock %}
+
+{% block appcontent %}
+    <section class="masonry-grid" id="CAH">
+        <h2 class="sub-title">List of endpoints:</h2><br>
+        <h2 class="table-flip">(╯°□°)╯︵ ┻━┻</h2>
+        <br><br><br>
+    </section>
+{% endblock %}

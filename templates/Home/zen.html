@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page-title %}App Builder 9000{% endblock %}
+{% block page-subtitle %}The Zen of Python{% endblock %}
+{% block button1 %}<a href="{% url 'home' %}#apps" class="contact-btn">Portfolio</a>{% endblock %}
+{% block button2 %}<a href="{% url 'zen' %}" class="contact-btn">Zen of Python</a>{% endblock %}
+
+{% block appcontent %}
+    <div style=margin:100px>
+        <h2 class="sub-title">{{ zen }}</h2>
+    </div>
+{% endblock %}

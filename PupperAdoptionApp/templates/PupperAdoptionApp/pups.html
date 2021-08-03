@@ -1,0 +1,40 @@
+{% extends 'PupperAdoptionApp/adopt_base.html' %}
+{% load static %}
+{% block title %} Pupper Adoption App {% endblock %}
+{% block home-button %}{% url 'home' %}{%endblock %}
+{% block pagetop-css %}cover-adopt{% endblock%}
+                       
+{% block templatecontent %}
+    <h2 class="sub-title">All your pups!</h2>
+    <section>
+        <div>
+            <table id="pup-table">
+                <tr>
+                    <th class="bold">Name</th>
+                    <th class="bold">Date Adopted</th>
+                    <th class="bold">Breed</th>
+                    <th class="bold">Group</th>
+                    <th class="bold">Height</th>
+                    <th class="bold">Weight</th>
+                    <th class="bold">Life Span</th>
+                    <th class="bold">Picture</th>
+                    <th></th>
+                </tr>
+                {% for dog in dogs %}
+                    <tr>
+                        <td class="bold">{{ dog.name }}</td>
+                        <td>{{ dog.adoption_date }}</td>
+                        <td>{{ dog.breed }}</td>
+                        <td>{{ dog.breed_group }}</td>
+                        <td>{{ dog.weight }}</td>
+                        <td>{{ dog.height }}</td>
+                        <td>{{ dog.life_span }}</td>
+                        <td id="pup-image"><img src="{{ dog.image }}"></td>
+                        <td id="table-btn"><a href="pups/{{ dog.id }}"><button class="contact-btn form-btn">Get rid of dog ( ´•︵•` )</button></a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+
+{% endblock %}

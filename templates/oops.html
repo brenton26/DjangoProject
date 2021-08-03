@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 404 {% endblock %}
+{% block pagetop-css %}cover-oops{% endblock%}
+
+{% block page-title %}(╯°□°)╯︵ ┻━┻{% endblock %}
+{% block page-subtitle %}404 You're Lost!{% endblock %}
+{% block button1 %}<a href="{% url 'home' %}" class="contact-btn">Back to Apps</a>{% endblock %}
+{% block button2 %}<a href="{% url 'zen' %}" class="contact-btn">Zen of Python</a>{% endblock %}
+
+{% block appcontent %}
+    <section class="masonry-grid" id="oops">
+
+    </section>
+{% endblock %}

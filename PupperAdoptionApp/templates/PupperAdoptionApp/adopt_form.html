@@ -1,0 +1,19 @@
+{% extends 'PupperAdoptionApp/adopt_base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} Pupper Adoption App {% endblock %}
+{% block home-button %}{% url 'home' %}{%endblock %}
+{% block pagetop-css %}cover-adopt{% endblock%}
+                       
+{% block templatecontent %}
+    <h2 class="sub-title">Name your new Pup!</h2>
+    <div class="grid masonry-grid">
+        <div class="grid-item app-image"><img src="{{ image }}"></div>
+    </div>
+    <form method="post" class="subtitle">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <label>Name: </label>&nbsp;&nbsp;&nbsp;&nbsp;<input id="name" type="text" name="name"> -->
+        <button type="input" class="contact-btn form-btn">Submit</button>
+    </form>
+{% endblock %}

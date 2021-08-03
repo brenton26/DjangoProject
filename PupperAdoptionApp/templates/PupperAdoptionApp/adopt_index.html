@@ -1,0 +1,30 @@
+{% extends 'PupperAdoptionApp/adopt_base.html' %}
+{% load static %}
+{% block title %} Pupper Adoption App {% endblock %}
+{% block home-button %}{% url 'home' %}{%endblock %}
+{% block pagetop-css %}cover-adopt{% endblock%}
+                       
+{% block templatecontent %}
+    <section class="masonry-grid" id="apps">
+        <br><br>
+        <h2 class="sub-title">Choose the pup you want to adopt!</h2>
+        <div class="grid">
+
+            {% for key, value in dogs.items %}
+                <a href="{{ value.id }}" type="submit" class="grid-item app-image"><img src="{{ value.image }}">
+                    <div class="fadedbox">
+                        <div class="text"> 
+                            Breed:   {{ value.breed }} </br>
+                            Type:   {{ value.breed_group }} </br>
+                            Height:   {{ value.height }} </br>
+                            Weight:   {{ value.weight }} </br>
+                            Life span:   {{ value.life_span }}
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+
+        </div>
+    </section>
+{% endblock %}
+

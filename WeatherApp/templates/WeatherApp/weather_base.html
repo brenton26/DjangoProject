@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %} <!-- must load static files on every template, even though it extends another template -->
+
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'WeatherApp/weather.css' %}">
+{% endblock %}
+
+{% block pagetop-css %} cover-weather-home {% endblock %}
+
+{% block page-title %}Weather App{% endblock %}
+{% block page-subtitle %} Lots of really cool stuff in this here app {% endblock %}
+{% block button1 %}<a href="{% url 'weather' %}" class="contact-btn">Something</a>{% endblock %}
+{% block button2 %}<a href="{% url 'weather' %}" class="contact-btn">Something Else</a>{% endblock %}
+
+{% block appcontent %}
+    {% block templatecontent %}{% endblock %} <!-- section that all the template specific content will render within -->
+{% endblock %}

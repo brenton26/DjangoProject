@@ -1,0 +1,45 @@
+.cover-adopt {
+    background:url('images/cover-adopt.jpg') right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*filter: brightness(50%);*/
+    height: 90vh;
+}
+#adopt-title {
+    font-size: 3.5em;
+    text-align: center;
+    color: #283361;
+    font-weight: 1000;
+    margin-bottom: 1em;
+}
+.main {
+    padding: 6em 0 0;
+    background: #F8BE6A;
+}
+table,
+th,
+td#pup-table {
+    margin: auto;
+}
+.bold {
+    font-weight: bold;
+}
+#pup-image {
+    max-height:250px;
+    max-width:250px;
+    height:auto;
+    width:auto;
+}
+table, th, td {
+    border: 2px solid #282828;
+    padding: 5px;
+}
+#table-btn {
+    padding-bottom: 40px;
+    padding-right: 40px;
+    white-space: nowrap;
+}
+.center {
+    display: inline-block;
+    text-align: center;
+}

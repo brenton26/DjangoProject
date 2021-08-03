@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %} <!-- must load static files on every template, even though it extends another template -->
+{% block title %} Adopt! {% endblock %}
+{% block tab-icon %}<link rel="icon" href="{% static 'PupperAdoptionApp/icons/doge.png' %}">{% endblock %}
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'PupperAdoptionApp/adopt.css' %}">
+{% endblock %}
+
+    {% block page-title %}Adoption App{% endblock %}
+    {% block page-subtitle %} Lots of really cool stuff in this here adoption app {% endblock %}
+    {% block button1 %}<a href="{% url 'adopt_index' %}" class="contact-btn">Adopt!</a>{% endblock %}
+    {% block button2 %}<a href="{% url 'pups' %}" class="contact-btn">Pets</a>{% endblock %}
+    {% block button3 %}<a href="{% url 'weather' %}" class="contact-btn">Something Else</a>{% endblock %}
+    {% block button4 %}<a href="{% url 'home' %}" class="contact-btn">Another Thing</a>{% endblock %}
+
+{% block appcontent %}
+    {% block templatecontent %}{% endblock %}
+{% endblock %}
