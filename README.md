@@ -14,22 +14,48 @@ The other tradeoff I had to make was that I was hoping to display the game detai
 
 ## How to run project
 
-#### First download project and create the environment to run it in:
+#### Download project and create the environment to run it in:
 
 ```bash
 # Create access project folder
 ~$  mkdir some_folder
-~$  cd project_name
+~$  cd some_folder
+
+# Clone or Download Project
+~$  git clone https://github.com/brenton26/DjangoProject.git
 
 # Create Python virtual env 
-~$  python3 -m env venv
+~$  python3 -m venv env
 
 # Activate virtual env
 ~$  source env/bin/activate
 
 # Install project requirements
-~$ 
-
-
-
+~$  cd DjangoProject
+~$  pip install -r requirements.txt
 ```
+
+#### Make any necessary migrations
+
+```bash
+# Create Migration files if they aren't already present
+~$  python manage.py makemigrations
+
+# Read and apply Migrations
+~$ python manage.py migrate
+```
+
+#### Start the server
+
+```bash
+# Starts server
+~$ python manage.py runserver
+```
+
+#### Go To Projoect
+
+Paste the URL into your browser: 'http://127.0.0.1:8000/'
+
+#### Other thing to know
+
+On the homepage, you can access the War Game by clicking on the image with playing cards on it. You are more than welcome to explore the other apps as well. Both the Weather app and Dog app are pretty self-explanatory to use. The API one is more complicated because it requires an administrator to upload a JSON to be access at an endpoint. The endpoints wont work until that happens. 
