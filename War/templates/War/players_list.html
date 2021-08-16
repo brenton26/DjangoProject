@@ -1,0 +1,33 @@
+{% extends 'War/war_base.html' %}
+{% load static %}
+{% block pagetop-css %}cover-war-short{% endblock%}
+                               
+{% block templatecontent %}
+<section id="players">
+    <br><br>
+    <h2 class="sub-title">All Players:</h2>
+    <div>
+        <table class="player-table">
+            <tr>
+                <th class="bold">Name</th>
+                <th class="bold">Wins</th>
+                <th class="bold">Losses</th>
+                <th></th>
+            </tr>
+            {% for player in players %}
+                <tr>
+                    <td class="bold">{{ player.name }}</td>
+                    <td>{{ player.wins }}</td>
+                    <td>{{ player.losses }}</td>
+                    <td class="table-btn"><a href="{{ player.id }}"><button class="contact-btn form-btn">Delete Player</button></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</section>
+<br><br><br>
+<a href="{% url 'add_player' %}">
+    <button class="war-btn" type="submit"> Add New Player </button>
+</a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

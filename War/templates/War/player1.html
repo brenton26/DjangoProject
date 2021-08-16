@@ -1,0 +1,22 @@
+{% extends 'War/war_base.html' %}
+{% load static %}
+{% block pagetop-css %}cover-war-short{% endblock%}
+                               
+{% block templatecontent %}
+<section>
+    <br><br>
+    <h2 class="sub-title">Who is the first player?</h2>
+    
+    <table class="player-table">
+        {% for player in players %}
+            <tr>
+                <td class="bold">{{ player.name }}</td>
+                <td class="table-btn"><a href="{{ player.id }}"><button class="contact-btn form-btn">Select</button></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+{% endblock %}

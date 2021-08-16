@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'WeatherApp',
     'PupperAdoptionApp',
     'CAH_API',
+    'War',
 ]
 
 MIDDLEWARE = [

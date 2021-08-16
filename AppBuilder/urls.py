@@ -24,5 +24,6 @@ urlpatterns = [
     path('weather/', include('WeatherApp.urls')),
     path('adopt/', include('PupperAdoptionApp.urls')),
     path('CAH/', include('CAH_API.urls')),
-    path('<path:resource>', views.oops, name="oops")
+    path('war/', include('War.urls')),
+    path('<path:resource>', views.oops, name="oops"),
 ]

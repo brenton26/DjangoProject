@@ -1,0 +1,22 @@
+{% extends 'War/war_base.html' %}
+{% load static %}
+{% block pagetop-css %}cover-war-short{% endblock%}
+                               
+{% block templatecontent %}
+<section>
+    <br><br>
+    <h2 class="sub-title">Create New Player</h2>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <table class="player-table">
+                {{ form.as_table }}
+            </table>
+            {{ form.non_field_errors }}
+            <br><br><br><br>
+            <button class="war-btn" type="submit"> Create </button>
+        </form>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+{% endblock %}

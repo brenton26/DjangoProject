@@ -1,0 +1,52 @@
+.cover-war {
+    background:url('images/cards1.jpg') right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.cover-war-short {
+    background:url('images/cards1.jpg') right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+table,
+th,
+td.player-table {
+    margin: auto;
+}
+.bold {
+    font-weight: bold;
+}
+table, th, td {
+    border: 2px solid #282828;
+    padding: 5px;
+}
+.table-btn {
+    padding-bottom: 5px;
+    padding-right: 40px;
+    white-space: nowrap;
+}
+#del-btn {
+    margin: 0px;
+    left: 38%;
+}
+.war-btn {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    border: 2px solid #282828;
+    background: transparent;
+    color: #282828;
+    font-size: 1.3em;
+    font-weight:500;
+    transition: 0.2s;
+    width: 150px;
+    margin: -75px;
+    left: 50%;
+}
+.war-btn:hover {
+    cursor: pointer;
+    color: white;
+    background: #cc241d;
+}

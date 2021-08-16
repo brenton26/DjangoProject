@@ -22,17 +22,11 @@ class WhiteCards(APIView):
             serializer = WhiteCardSerializer(cards, many=True)
             return Response(serializer.data)
         else:
-            random_card_index = random.randrange(len(WhiteCard.cards.all()))
-            card = WhiteCard.cards.get(id=random_card_index)
-            serializer = WhiteCardSerializer(card)
-            return Response(serializer.data)
-    
-    def post(self, request):
-        serializer = WhiteCardSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            if id==1:
+                random_card_index = random.randrange(len(WhiteCard.cards.all()))
+                card = WhiteCard.cards.get(id=random_card_index)
+                serializer = WhiteCardSerializer(card)
+                return Response(serializer.data)
 
 
 class BlackCards(APIView):
@@ -43,15 +37,9 @@ class BlackCards(APIView):
             serializer = BlackCardSerializer(cards, many=True)
             return Response(serializer.data)
         else:
-            random_card_index = random.randrange(len(BlackCard.cards.all()))
-            card = BlackCard.cards.get(id=random_card_index)
-            serializer = BlackCardSerializer(card)
-            return Response(serializer.data)
-
-    def post(self, request):
-        serializer = BlackCardSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            if id==1:
+                random_card_index = random.randrange(len(BlackCard.cards.all()))
+                card = BlackCard.cards.get(id=random_card_index)
+                serializer = BlackCardSerializer(card)
+                return Response(serializer.data)
 

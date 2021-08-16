@@ -1,0 +1,19 @@
+{% extends 'War/war_base.html' %}
+{% load static %}
+{% block pagetop-css %}cover-war-short{% endblock%}
+                               
+{% block templatecontent %}
+<section>
+    <br><br>
+    <h2 class="sub-title">Are you sure you want to delete {{ player.name }}?</h2>
+    <br>
+        <form method="post">
+            {% csrf_token %}
+            <button class="war-btn" id="del-btn" type="submit">Yes</button>
+            <a href="{% url 'players' %}">
+                <button class="war-btn" id="del-btn" type="button">Nevermind</button>
+            </a>
+        </form>
+</section>
+<br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'War/war_base.html' %}
+{% load static %}
+{% block pagetop-css %}cover-war-short{% endblock%}
+                               
+{% block templatecontent %}
+<section>
+    <br><br>
+    <h2 class="sub-title">{{ player1.name }} is battling {{ player2.name }}!</h2>
+    <h3>
+        {{ winner.name }} has won the game!<br><br><br>
+        {{ loser.name }} has lost the game! (╯°□°)╯︵ ┻━┻ <br><br><br>
+        <i>Please review the console log for game details</i>
+    </h3>
+    <br><br>
+    <a href="{% url 'player1' %}">
+        <button class="war-btn" id="del-btn" type="button">Play Again</button>
+    </a>
+    <a href="{% url 'players' %}">
+        <button class="war-btn" id="del-btn" type="button">See Scoreboard</button>
+    </a>
+    <br><br><br><br><br><br>
+</section>
+{% endblock %}

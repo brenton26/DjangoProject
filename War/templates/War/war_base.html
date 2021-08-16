@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'War/war.css' %}">
+{% endblock %}
+{% block tab-icon %}<link rel="icon" href="{% static 'War/images/card-icon.png' %}">{% endblock %}
+{% block pagetop-css %}cover-war{% endblock %}
+
+{% block page-title %}War!{% endblock %}
+{% block page-subtitle %} An app to play the card game War {% endblock %}
+{% block button1 %}<a href="{% url 'player1' %}#play" class="contact-btn">Play War!</a>{% endblock %}
+{% block button2 %}<a href="{% url 'war_home' %}#rules" class="contact-btn">Rules</a>{% endblock %}
+{% block button3 %}<a href="{% url 'players' %}#players" class="contact-btn">Players</a>{% endblock %}
+
+{% block appcontent %}
+    {% block templatecontent %}{% endblock %} <!-- section that all the template specific content will render within -->
+{% endblock %}
